@@ -1,0 +1,14 @@
+# Apache Configuration for FreshMart Grocery
+AddDefaultCharset UTF-8
+
+# Prevent directory listings
+Options -Indexes
+
+# Protect sensitive database file downloads
+<FilesMatch "\.(sql|log|ini)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Follow symbolic links
+Options +FollowSymLinks
